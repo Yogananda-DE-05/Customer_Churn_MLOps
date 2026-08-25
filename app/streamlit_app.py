@@ -7,6 +7,12 @@ model = joblib.load("models/churn_model.pkl")
 feature_names = joblib.load("models/feature_names.pkl")
 
 st.title("Customer Churn Prediction")
+st.subheader("Model Performance")
+
+st.metric("Accuracy", "79.35%")
+st.metric("Precision", "65.65%")
+st.metric("Recall", "46.11%")
+st.metric("F1 Score", "54.17%")
 
 senior = st.selectbox(
     "Senior Citizen",
